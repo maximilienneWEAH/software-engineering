@@ -1,0 +1,6 @@
+export const MOCK_LAB_RESULTS = [
+  { id: "L001", patientId: "P001", patientName: "Jean-Baptiste Manga", test: "Complete Blood Count", status: "Normal", date: "2025-05-12", doctor: "Dr. Amara Nkolo", tech: "Kwame Essien", values: { WBC: "7.2 K/µL", RBC: "4.8 M/µL", Hemoglobin: "14.5 g/dL", Platelets: "220 K/µL" } },
+  { id: "L002", patientId: "P002", patientName: "Abena Fouda", test: "Malaria Rapid Test", status: "Abnormal", date: "2025-05-08", doctor: "Dr. Amara Nkolo", tech: "Kwame Essien", values: { Plasmodium: "Falciparum", Density: "++", RDT: "Positive" } },
+  { id: "L003", patientId: "P003", patientName: "Emmanuel Tabi", test: "HbA1c", status: "Critical", date: "2025-05-11", doctor: "Dr. Amara Nkolo", tech: "Kwame Essien", values: { HbA1c: "9.2%", Glucose: "240 mg/dL", Insulin: "Low" } },
+  { id: "L004", patientId: "P004", patientName: "Grace Ndong", test: "Chest X-Ray Report", status: "Abnormal", date: "2025-05-14", doctor: "Dr. Amara Nkolo", tech: "Kwame Essien", values: { Findings: "Bilateral infiltrates", Impression: "Pneumonia" } },
+];
