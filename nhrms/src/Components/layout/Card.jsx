@@ -1,4 +1,4 @@
-import { C } from "../styles/theme";
+import { C } from "../../Styles/theme";
 
 export default function Card({ children, style = {} }) {
   return (

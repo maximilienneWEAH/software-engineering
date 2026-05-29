@@ -113,3 +113,4 @@ export const NurseDashboard = ({ user }) => {
     </div>
   );
 };
+export default NurseDashboard;

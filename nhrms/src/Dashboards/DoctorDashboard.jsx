@@ -1,6 +1,6 @@
 import Card from "../Components/layout/Card";
 import { StatCard } from "../Components/layout/StatCard";
-import { MOCK_PATIENTS } from "../Data/appointments";
+import { MOCK_PATIENTS } from "../Data/patients";
 import { C } from "../Styles/theme";
 import { StatusBadge } from "../Components/layout/StatusBadge";
 import { MiniBarChart } from "../Components/charts/MiniBarChart";
@@ -65,3 +65,4 @@ export const DoctorDashboard = ({ user }) => {
   );
 };
 
+export default DoctorDashboard;

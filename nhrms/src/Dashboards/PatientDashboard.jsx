@@ -48,3 +48,4 @@ export const PatientDashboard = ({ user }) => (
     </div>
   </div>
 );
+export default PatientDashboard;

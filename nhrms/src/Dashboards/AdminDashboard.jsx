@@ -53,3 +53,4 @@ export const AdminDashboard = () => (
     </div>
   </div>
 );
+export default AdminDashboard;

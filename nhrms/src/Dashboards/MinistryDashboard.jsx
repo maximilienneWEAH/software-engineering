@@ -144,3 +144,4 @@ export const MinistryDashboard = () => {
     </div>
   );
 };
+export default MinistryDashboard;

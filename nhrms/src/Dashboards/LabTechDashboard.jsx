@@ -105,3 +105,4 @@ export const LabTechDashboard = ({ user }) => {
     </div>
   );
 };
+export default LabTechDashboard;
