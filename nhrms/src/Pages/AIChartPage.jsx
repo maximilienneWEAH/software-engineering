@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { C } from "../Styles/theme";
+import DashboardLayout from "../Components/layout/DashbordLayout";
+ 
 
- const AI_RESPONSES = {
+const AI_RESPONSES = {
   fever: {
     reply: "Based on your symptoms of **fever and headache**, here are some possibilities:\n\n**Possible causes:**\n• Malaria (very common in Cameroon — test recommended urgently)\n• Typhoid fever\n• Viral infection (flu, dengue)\n• Bacterial meningitis (if headache is severe)\n\n**Urgency Level:** 🟡 Moderate — seek care within 24 hours\n\n**Immediate advice:**\n• Stay hydrated — drink plenty of clean water\n• Rest and avoid physical exertion\n• Take paracetamol for fever (avoid aspirin)\n• Do NOT self-medicate with antibiotics\n\n**⚠️ Go to ER immediately if:** fever exceeds 39.5°C, severe headache with stiff neck, confusion, or rash appears.",
     urgency: "Moderate"
@@ -40,7 +42,7 @@ const formatMessage = (text) => {
   });
 };
 
-export const AIChatPage = ({ user }) => {
+export const AIChatPage = ({ user, onLogout }) => {
   const [messages, setMessages] = useState([
     { id: 1, role: "ai", text: AI_RESPONSES.default.reply, time: new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" }) }
   ]);
@@ -112,6 +114,12 @@ IMPORTANT: Always clarify you cannot provide definitive medical diagnosis. Keep 
   const quickPrompts = ["I have fever and headache", "Explain my CBC result", "High blood pressure advice", "Malaria symptoms?"];
 
   return (
+
+    <DashboardLayout
+      user={user}
+      title="AI Health Assistant"
+      onLogout={onLogout}
+    >
     <div className="animate-in" style={{ display: "flex", flexDirection: "column", height: "calc(100vh - 100px)" }}>
       {/* Header */}
       <div style={{ marginBottom: 16 }}>
@@ -191,5 +199,7 @@ IMPORTANT: Always clarify you cannot provide definitive medical diagnosis. Keep 
       </div>
       <p style={{ fontSize: 10, color: C.muted, marginTop: 6, textAlign: "center" }}>⚠️ AI provides general health information only. Not a substitute for professional medical diagnosis.</p>
     </div>
+    </DashboardLayout>
   );
 };
+export default AIChatPage;
